@@ -40,17 +40,23 @@
                         <input class="form-control mr-sm-2" type="text" placeholder="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0 searchBtn" type="submit">Search</button>
                     </form>
+                    @if(Auth::check())
                     <div class="dropdown show">
                             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                              style="background-color: #0d8b9e !important; border-color: #0d8b9e !important">
-                             <img src="/images/user.png"></a>
+                             <img src="/images/user.png">{{ Auth::user()->first_name }}</a>
                           
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                               <a class="dropdown-item" href="#" id="settingsNav">Settings</a>
-                              <a class="dropdown-item" href="#">Sign out</a>                              
+                              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">Sign out</a>    
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>                          
                             </div>
                         </div> 
+                    @endif
                 </div>
             </nav>
             @yield('content')
