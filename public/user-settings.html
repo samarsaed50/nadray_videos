@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/fav.png">
+    <title>Cannel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/css/perfect-scrollbar.css'>
+    <link rel='stylesheet' href='https://rawgit.com/kenwheeler/slick/master/slick/slick.css'>
+    <link rel='stylesheet' href='https://rawgit.com/kenwheeler/slick/master/slick/slick-theme.css'>
+    <link rel='stylesheet' type='text/css' href="css/style.css">
+    <link rel='stylesheet' type='text/css' href="css/style-playlist.css">
+    <link rel='stylesheet' type='text/css' href="css/spaces.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">     
+       
+
+</head>
+<body>
+        <nav class="navbar  navbar-expand-md custom-navbar navbar-dark">
+                <img class="navbar-brand" src="images/logo.png" id="logo_custom" width="10%"  alt="logo">
+                <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                    <ul class="navbar-nav m-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><b>Home |</b></a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="details.html"><b>Master's Degree in Awqaf |</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="details.html"><b>Master’s Degree in The Humanitarian Action</b></a>
+                        </li>
+                    </ul>
+                    <form class="form-inline ml-auto">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0 searchBtn" type="submit">Search</button>
+                    </form>
+                    <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                             style="background-color: #0d8b9e !important; border-color: #0d8b9e !important">
+                             <img src="images/user.png"></a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item" href="#" id="settingsNav">Settings</a>
+                              <a class="dropdown-item" href="#">Sign out</a>                              
+                            </div>
+                        </div> 
+                </div>
+            </nav>
+            <div class="space-25"></div>
+    <section class="content">
+        <div class="container">
+            <div class="row">    
+                    <div id="settings-content" class="tabcontent1" style="margin-left: 17%;height: 530px;">
+                            <div class="space-10"></div>
+                           <h3 style="color: #0d8b9e">Edit</h3>
+                           <hr>
+                           <form id="editForm">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">First name</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput1" placeholder=" " required>
+                                </div>
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput2">Last name</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" " required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="formGroupExampleInput3">Email</label>
+                                        <input type="email" class="form-control" id="formGroupExampleInput3" placeholder=" " required>
+                                      </div>
+                                <div class="form-group">
+                                        <label for="formGroupExampleInput3">Password</label>
+                                        <input type="password" class="form-control" id="formGroupExampleInput3" placeholder=" " required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="formGroupExampleInput">Confirm password</label>
+                                        <input type="password" class="form-control" id="formGroupExampleInput4" placeholder=" " required>
+                                </div>
+                              </form>
+                              <div class="space-25"></div>
+                              <div style="display: flex">
+                                    <button class="btn btn-outline-secondary headerBtn" type="submit">Save</button>
+                                    <button class="btn btn-outline-secondary headerBtn" onclick="resetEditForm();">Reset</button>
+                                </div>
+                        </div>                                                 
+                    
+            </div>
+        </div>
+
+    </section>
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/js/min/perfect-scrollbar.jquery.min.js'></script>
+    <script src='https://rawgit.com/kenwheeler/slick/master/slick/slick.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+  <script type="text/javascript">
+    function resetForm() {
+        document.getElementById("myForm").reset();
+    }
+    function resetEditForm() {
+        document.getElementById("editForm").reset();
+    }
+</script>
+</body>
+</html>
+      

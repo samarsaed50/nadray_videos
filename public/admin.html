@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/fav.png">
+    <title>Cannel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/css/perfect-scrollbar.css'>
+    <link rel='stylesheet' href='https://rawgit.com/kenwheeler/slick/master/slick/slick.css'>
+    <link rel='stylesheet' href='https://rawgit.com/kenwheeler/slick/master/slick/slick-theme.css'>
+    <link rel='stylesheet' type='text/css' href="css/style.css">
+    <link rel='stylesheet' type='text/css' href="css/style-playlist.css">
+    <link rel='stylesheet' type='text/css' href="css/spaces.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">     
+       
+
+</head>
+<body>
+    <section class="navbar" style="background-color:#17a2b8 !important">
+        <div class="container navbar" style="background-color:#17a2b8 !important">
+            <div class="row">
+                <div class="col-md-3 logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="col-md-9">
+                    <div class="space-15"></div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4> Lifelong learning is vital for everybody, no matter the age or
+                                    level of education.
+                            </h4>
+                        </div>    
+                       
+                        <div class="col-md-3">
+                                <div class="dropdown show">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                         style="background-color: #0d8b9e !important; border-color: #0d8b9e !important">
+                                         <img src="images/user.png">
+                                            Admin-name
+                                        </a>
+                                      
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                          <a class="dropdown-item" href="#" id="settingsNav">Settings</a>
+                                          <a class="dropdown-item" href="#">Sign out</a>                              
+                                        </div>
+                                    </div>               
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                    <div class="tab">
+                        <button class="tablinks active" id="humanitarian">Master’s Degree in The Humanitarian Action</button>
+                        <button class="tablinks" id="awqaf">Master's Degree in Awqaf</button>
+                        <button class="tablinks" id="settings">Settings</button>
+                    </div>
+                    <div id="human" class="tabcontent">
+                        <div class="space-10"></div>
+                       <h3 id="humanT">Humanitarian Action</h3>
+                       <h3 id="waqf" style="display: none;">Awqaf</h3>
+                       <hr>
+                       <form id="myForm">
+                            <div class="form-group">
+                              <label for="formGroupExampleInput">Video's title</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="enter the title" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput2">Add description</label>
+                              <textarea class="form-control" id="formGroupExampleInput2" placeholder="add description" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput3">Upload video</label><br>
+                                <input type="file" name="file" id="file" required>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                 Lecture
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                     Quizs
+                                </label>
+                            </div>
+                           
+                          </form>
+                          <div class="space-25"></div>
+                          <div style="display: flex">
+                            <button class="btn btn-outline-secondary headerBtn">Save</button>
+                            <button class="btn btn-outline-secondary headerBtn" onclick="resetForm();">Reset</button>
+                        </div>
+                    </div>      
+                    <div id="settings-content" class="tabcontent" style="display: none">
+                            <div class="space-10"></div>
+                           <h3 style="color: #0d8b9e">Edit</h3>
+                           <hr>
+                           <form id="editForm">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">First name</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput1" placeholder=" " required>
+                                </div>
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput2">Last name</label>
+                                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" " required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="formGroupExampleInput3">Password</label>
+                                        <input type="password" class="form-control" id="formGroupExampleInput3" placeholder=" " required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="formGroupExampleInput">Confirm password</label>
+                                        <input type="password" class="form-control" id="formGroupExampleInput4" placeholder=" " required>
+                                </div>
+                              </form>
+                              <div class="space-25"></div>
+                              <div style="display: flex">
+                                    <button class="btn btn-outline-secondary headerBtn" type="submit">Save</button>
+                                    <button class="btn btn-outline-secondary headerBtn" onclick="resetEditForm();">Reset</button>
+                                </div>
+                        </div>                                                 
+                    
+            </div>
+        </div>
+
+    </section>
+    <section id="manage-user" style="display: none;">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>
+                                <button class="btn btn-outline-secondary headerBtn" id="back">Back</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">  
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                    <th>Email</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>samar</td>
+                                    <td>ahmed</td>
+                                    <td>samar@gmail.com</td>
+                                    <td>
+                                        <button class="btn btn-default">Ban</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td>samar</td>
+                                        <td>ahmed</td>
+                                        <td>samar@gmail.com</td>
+                                        <td>
+                                            <button class="btn btn-default">Ban</button>
+                                        </td>
+                                </tr>
+                                <tr>
+                                            <td>samar</td>
+                                            <td>ahmed</td>
+                                            <td>samar@gmail.com</td>
+                                            <td>
+                                                <button class="btn btn-default">Ban</button>
+                                            </td>
+                                </tr>
+                                <tr>
+                                        <td>samar</td>
+                                        <td>ahmed</td>
+                                        <td>samar@gmail.com</td>
+                                        <td>
+                                            <button class="btn btn-default">Ban</button>
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                          </div>
+                </div>
+            </div>
+         
+        </section>
+    <div class="container" id="manage-link">
+        <div class="row">
+            <div class="col-md-12">
+                <h5>
+                    <button class="btn btn-outline-secondary headerBtn" id="manage">Manage Users</a>
+                </h5>
+            </div>
+        </div>
+    </div>
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/js/min/perfect-scrollbar.jquery.min.js'></script>
+    <script src='https://rawgit.com/kenwheeler/slick/master/slick/slick.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+  <script type="text/javascript">
+    function resetForm() {
+        document.getElementById("myForm").reset();
+    }
+    function resetEditForm() {
+        document.getElementById("editForm").reset();
+    }
+    
+   $("#humanitarian").click(function(){
+        $("#humanT").css("display",'block');
+        $("#human").css("display",'block');
+        $("#waqf").css("display",'none');
+        $("#settings-content").css("display",'none');
+        $("#manage-user").css("display",'none');
+        $("#humanitarian").addClass("active");
+        $("#awqaf").removeClass("active");
+        $("#settings").removeClass("active");
+    });
+    $("#awqaf").click(function(){
+        $("#waqf").css("display",'block');
+        $("#human").css("display",'block');
+        $("#humanT").css("display",'none');
+        $("#settings-content").css("display",'none');
+        $("#manage-user").css("display",'none');
+        $("#awqaf").addClass("active");
+        $("#humanitarian").removeClass("active");
+        $("#settings").removeClass("active");
+    });
+    $("#settings").click(function(){
+        $("#settings-content").css("display",'block');
+        $("#human").css("display",'none');
+        $("#settings").addClass("active");
+        $("#awqaf").removeClass("active");
+        $("#humanitarian").removeClass("active");
+    });
+    $("#manage-link").click(function(){
+        $("#manage-user").css("display",'block');
+        $(".content").css("display",'none');
+        $("#settings-content").css("display",'none');
+        $("#manage-link").css("display",'none');
+      
+    });
+    $("#back").click(function(){
+        $(".content").css("display",'block');
+        $("#human").css("display",'block');
+        $("#manage-user").css("display",'none');
+        $("#manage-link").css("display",'block');
+      
+    });
+    $("#settingsNav").click(function(){
+        $(".content").css("display",'block');
+        $("#settings-content").css("display",'block');
+        $("#human").css("display",'none');
+        $("#settings").addClass("active");
+        $("#awqaf").removeClass("active");
+        $("#humanitarian").removeClass("active");
+
+      
+    });    
+</script>
+</body>
+</html>
+      
