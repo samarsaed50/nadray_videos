@@ -58,16 +58,16 @@
         <div class="container">
             <div class="row">
                     <div class="tab">
-                        <button class="tablinks active" id="humanitarian">Master’s Degree in The Humanitarian Action</button>
-                        <button class="tablinks" id="awqaf">Master's Degree in Awqaf</button>
-                        <button class="tablinks" id="settings">Settings</button>
+                        <a href="#" class="tablinks active" id="humanitarian">Master’s Degree in The Humanitarian Action</a>
+                        <a href="#" class="tablinks" id="awqaf">Master's Degree in Awqaf</a>
+                        <a href="#" class="tablinks" id="settings">Settings</a>
                     </div>
                     <div id="human" class="tabcontent">
                         <div class="space-10"></div>
                        <h3 id="humanT">Humanitarian Action</h3>
-                       <h3 id="waqf" style="display: none;">Awqaf</h3>
+                       <h3 id="waqf" style="display: none;color: #0d8b9e;">Awqaf</h3>
                        <hr>
-                       <form id="myForm">
+                       <form id="tab1">
                             <div class="form-group">
                               <label for="formGroupExampleInput">Video's title</label>
                               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="enter the title" required>
@@ -105,9 +105,9 @@
                             <div class="space-10"></div>
                            <h3 style="color: #0d8b9e">Edit</h3>
                            <hr>
-                           <form id="editForm">
+                           <form id="tab2">
                                 <div class="form-group">
-                                  <label for="formGroupExampleInput">First name</label>
+                                  <label for="formGroupExampleInput1">First name</label>
                                   <input type="text" class="form-control" id="formGroupExampleInput1" placeholder=" " required>
                                 </div>
                                 <div class="form-group">
@@ -115,15 +115,23 @@
                                   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" " required>
                                 </div>
                                 <div class="form-group">
-                                        <label for="formGroupExampleInput3">Password</label>
-                                        <input type="password" class="form-control" id="formGroupExampleInput3" placeholder=" " required>
-                                </div>
+                                    <label for="formGroupExampleInput3">Email</label>
+                                    <input type="email" class="form-control" id="formGroupExampleInput3" placeholder=" " required>
+                                  </div>
                                 <div class="form-group">
-                                        <label for="formGroupExampleInput">Confirm password</label>
+                                        <label for="formGroupExampleInput4">Password</label>
                                         <input type="password" class="form-control" id="formGroupExampleInput4" placeholder=" " required>
                                 </div>
+                                <div class="form-group">
+                                        <label for="formGroupExampleInput5">Confirm password</label>
+                                        <input type="password" class="form-control" id="formGroupExampleInput5" placeholder=" " required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput6">Upload profile picture</label>
+                                    <input type="file" class="form-control" id="formGroupExampleInput6">
+                            </div>
                               </form>
-                              <div class="space-25"></div>
+                              <div class="space-10"></div>
                               <div style="display: flex">
                                     <button class="btn btn-outline-secondary headerBtn" type="submit">Save</button>
                                     <button class="btn btn-outline-secondary headerBtn" onclick="resetEditForm();">Reset</button>
@@ -218,15 +226,15 @@
 
   <script type="text/javascript">
     function resetForm() {
-        document.getElementById("myForm").reset();
+        document.getElementById("tab1").reset();
     }
     function resetEditForm() {
-        document.getElementById("editForm").reset();
+        document.getElementById("tab2").reset();
     }
     
    $("#humanitarian").click(function(){
-        $("#humanT").css("display",'block');
         $("#human").css("display",'block');
+        $("#humanT").css("display",'block');
         $("#waqf").css("display",'none');
         $("#settings-content").css("display",'none');
         $("#manage-user").css("display",'none');
@@ -237,8 +245,8 @@
     $("#awqaf").click(function(){
         $("#waqf").css("display",'block');
         $("#human").css("display",'block');
-        $("#humanT").css("display",'none');
         $("#settings-content").css("display",'none');
+        $("#humanT").css("display",'none');
         $("#manage-user").css("display",'none');
         $("#awqaf").addClass("active");
         $("#humanitarian").removeClass("active");
@@ -247,6 +255,7 @@
     $("#settings").click(function(){
         $("#settings-content").css("display",'block');
         $("#human").css("display",'none');
+        $("#waqf").css("display",'none');
         $("#settings").addClass("active");
         $("#awqaf").removeClass("active");
         $("#humanitarian").removeClass("active");

@@ -617,11 +617,14 @@ p, ul li, ol li {
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 30%;
-  height: 450px;
+  height: 600px;
+}
+#manage {
+  float:right;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.tab a {
   display: block;
   background-color: inherit;
   color: black;
@@ -635,13 +638,14 @@ p, ul li, ol li {
   font-size: 17px;
 }
 
+
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tab a:hover{
   background-color: #ddd;
 }
 
 /* Create an active/current "tab button" class */
-.tab button.active {
+.tab a.active {
   background-color: #ccc;
 }
 
@@ -652,20 +656,20 @@ p, ul li, ol li {
   border: 1px solid #ccc;
   width: 70%;
   border-left: none;
-  height: 450px;
+  height: 600px;
 } 
 .tabcontent1 {
   float: left;
   padding: 0px 12px;
   border: 1px solid #ccc;
   width: 70%;
-  height: 450px;
+  height: 600px;
 }
 #humanT {
   color:#17a2b8;
 }
 #waqf {
-  color:#17a2b8;
+  color:#343a40;
 }
 /* manage users */
 table {
